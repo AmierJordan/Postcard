@@ -29,6 +29,7 @@ class ViewController: UIViewController {
 
     
     @IBAction func sendMailButtonPressed(sender: UIButton) {
+        // Adding a Comment here to test commits
         massageLabel.hidden = false
         massageLabel.text = enterMessageTextField.text
         massageLabel.textColor = UIColor.redColor()
