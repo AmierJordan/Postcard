@@ -9,6 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    
+    @IBOutlet weak var massageLabel: UILabel!
+    @IBOutlet weak var enterNameTextField: UITextField!
+    @IBOutlet weak var enterMessageTextField: UITextField!
+    @IBOutlet weak var mailButton: UIButton!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +27,18 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
+    @IBAction func sendMailButtonPressed(sender: UIButton) {
+        massageLabel.hidden = false
+        massageLabel.text = enterMessageTextField.text
+        massageLabel.textColor = UIColor.redColor()
+        
+        enterMessageTextField.text = ""
+        enterMessageTextField.resignFirstResponder()
+        
+        mailButton.setTitle("Mail Send", forState: UIControlState.Normal)
+    }
+    
 
 }
 
